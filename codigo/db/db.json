@@ -1,0 +1,150 @@
+{
+  "usuarios": [
+    {
+      "id": "2",
+      "nome": "Cauã Thomarco",
+      "email": "cauathomarco@gmail.com",
+      "cpf": "14406119639",
+      "cidade": "Pedro Leopoldo",
+      "estado": "MG",
+      "pais": "Brasil",
+      "identidade": "C:\\fakepath\\Captura de tela 2025-05-30 115235.png",
+      "rua": "Rua Padre Sinfronio Torres de Freitas - 199",
+      "senha": "1011"
+    },
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@site.com",
+      "cpf": "12345678910",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "pais": "Brasil",
+      "senha": "admin123",
+      "admin": true,
+      "fotoPerfil": "assets/img/perfil-icon.png"
+    },
+    {
+      "id": "f818",
+      "nome": "Marco Antônio Teixeira Júnior",
+      "email": "marcobolinha@hotmail.com",
+      "cpf": "88513114634",
+      "cidade": "Pedro Leopoldo",
+      "estado": "MG",
+      "pais": "Brasil",
+      "identidade": "C:\\fakepath\\Captura de tela 2025-05-30 115235.png",
+      "rua": "Rua Padre Sinfronio Torres de Freitas - 199",
+      "senha": "139513",
+      "fotoPerfil": "http://127.0.0.1:5501/codigo/Cau%C3%A3%20Thomarco/assets/img/perfil-icon.png"
+    }
+  ],
+  "denuncias": [
+    {
+      "local": "Rua Padre Sinfrônio Torres de Freitas",
+      "data": "2025-06-22",
+      "hora": "18:20",
+      "tipoArea": "urbana",
+      "descricao": "Fogo em terreno abandonado, em frente a uma casa de grade branca e pinheiros altos, de facil identificação devido a fumaça!",
+      "arquivo": "",
+      "nome": "Cauã Thomarco Thomaz Teixeira",
+      "telefone": "(31) 99908-2523",
+      "email": "cauathomarco@gmail.com",
+      "userId": 2,
+      "lat": null,
+      "lng": null,
+      "id": 1750627274096
+    }
+  ],
+  "noticias": [
+    {
+      "id": 1,
+      "title": "Bombeiros do Norte de Minas promovem ações na Semana da Prevenção",
+      "date": "2024-06-01T00:00:00",
+      "category": "Prevenção",
+      "content": "Durante a Semana da Prevenção, os bombeiros do Norte de Minas realizaram diversas ações educativas voltadas à comunidade.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-750-500/17492353822.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/bombeiros-do-norte-de-minas-promovem-acoes-na-semana-da-prevencao"
+    },
+    {
+      "id": 2,
+      "title": "Bombeiros de Montes Claros realizam caminhada no Parque da Sapucaia",
+      "date": "2024-06-02T00:00:00",
+      "category": "Saúde e Meio Ambiente",
+      "content": "A ação promoveu saúde, atividade física e conscientização ambiental entre os participantes.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-750-500/17492374796.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/bombeiros-de-montes-claros-realizam-caminhada-no-parque-da-sapucaia-em-acao-de-promocao-a-saude-e-preservacao-ambiental"
+    },
+    {
+      "id": 3,
+      "title": "Bombeiros promovem evento de conscientização ambiental no CTP",
+      "date": "2024-06-03T00:00:00",
+      "category": "Saúde e Meio Ambiente",
+      "content": "Evento reuniu militares, alunos e comunidade para reforçar a importância da preservação ambiental.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-255-170/17491429538.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/bombeiros-promovem-evento-de-conscientizacao-ambiental-no-ctp"
+    },
+    {
+      "id": 4,
+      "title": "Bombeiros de Bocaiuva e Secretaria de Meio Ambiente promovem ações",
+      "date": "2024-06-04T00:00:00",
+      "category": "Saúde e Meio Ambiente",
+      "content": "Diversas ações foram realizadas na Semana do Meio Ambiente, em parceria com a Secretaria Municipal.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-750-500/17491291695.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/bombeiros-de-bocaiuva-e-secretaria-de-meio-ambiente-promovem-acoes-na-semana-do-meio-ambiente"
+    },
+    {
+      "id": 5,
+      "title": "10º BBM promove ações durante o Maio Amarelo",
+      "date": "2024-05-25T00:00:00",
+      "category": "Segurança no Trânsito",
+      "content": "Campanha do Maio Amarelo reforça compromisso com a educação para o trânsito seguro.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-255-170/174905856712.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/10o-bbm-promove-acoes-durante-o-maio-amarelo-e-reforca-compromisso-com-a-seguranca-no-transito"
+    },
+    {
+      "id": 6,
+      "title": "2º COB realiza visitas técnicas em municípios do Triângulo Mineiro",
+      "date": "2024-06-05T00:00:00",
+      "category": "Gestão e Planejamento",
+      "content": "As visitas técnicas têm como objetivo reforçar a segurança estrutural e ações preventivas.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-255-170/17490547283.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/20cob-realiza-visitas-tecnicas-em-municipios-do-triangulo-mineiro"
+    },
+    {
+      "id": 7,
+      "title": "Museu dos Militares Mineiros promove programação especial",
+      "date": "2024-06-06T00:00:00",
+      "category": "Cultura e Meio Ambiente",
+      "content": "Programação especial reforça a importância da preservação ambiental e da memória institucional.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-750-500/17490432136.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/museu-dos-militares-mineiros-promove-programacao-especial-na-semana-do-meio-ambiente"
+    },
+    {
+      "id": 8,
+      "title": "5ª Cia Ind intensifica ações preventivas para o período de estiagem",
+      "date": "2024-06-07T00:00:00",
+      "category": "Prevenção",
+      "content": "A companhia realiza campanhas educativas e visitas técnicas visando prevenir incêndios florestais.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-750-500/174889192316.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/5a-cia-ind-intensifica-acoes-preventivas-para-o-periodo-de-estiagem-na-regiao-central-do-estado"
+    },
+    {
+      "id": 9,
+      "title": "3ª Corrida do Bombeiro de Poços de Caldas reúne mais de 1500 atletas",
+      "date": "2024-06-08T00:00:00",
+      "category": "Esporte e Comunidade",
+      "content": "Evento esportivo promovido pelos bombeiros reforça integração com a comunidade e incentivo à saúde.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-255-170/17488917266.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/3a-corrida-do-bombeiro-de-pocos-de-caldas-reune-mais-de-1500-atletas"
+    },
+    {
+      "id": 10,
+      "title": "Junho Laranja: Prevenção de queimaduras e combate à violência contra a mulher em Minas Gerais",
+      "date": "2024-06-03T00:00:00",
+      "category": "Campanha",
+      "content": "O Corpo de Bombeiros Militar de Minas Gerais (CBMMG) promove a campanha “Junho Laranja”, com foco na prevenção de queimaduras e na conscientização sobre a violência contra a mulher. A iniciativa visa orientar a população sobre riscos e cuidados, além de estimular denúncias e o apoio às vítimas. A campanha é realizada em parceria com outras instituições públicas.",
+      "image": "https://www.bombeiros.mg.gov.br/storage/images/thumb/thumb-255-170/174923778612.jpeg",
+      "link": "https://www.bombeiros.mg.gov.br/junho-laranja-prevencao-de-queimaduras-e-combate-a-violencia-contra-a-mulher-em-minas-gerais"
+    }
+  ]
+}

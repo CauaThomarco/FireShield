@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fazer Denúncia</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">FireShield</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Registrar-se</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="como_denunciar.html">Como Denunciar</a></li>
+    </ul>
+    <div id="perfil-container" class="perfil-container"></div>
+  </nav>
+</header>
+
+<section class="form-section">
+  <div class="form-container">
+    <h2>Fazer Denúncia</h2>
+    <form id="denuncia-form">
+      <div class="form-group">
+        <label for="local">Local da queimada</label>
+        <input type="text" id="local" name="local" placeholder="Endereço ou ponto de referência" required />
+      </div>
+
+      <div class="form-group">
+        <label>Data e hora da ocorrência</label>
+        <input type="date" id="data" name="data" required />
+        <input type="time" id="hora" name="hora" required />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo-area">Tipo de área</label>
+        <select id="tipo-area" name="tipo-area">
+          <option>Área urbana</option>
+          <option>Área rural</option>
+          <option>Área de preservação</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descrição da ocorrência</label>
+        <textarea id="descricao" name="descricao" placeholder="Descreva o que aconteceu" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="arquivo">Foto/Vídeo (opcional)</label>
+        <input type="file" id="arquivo" name="arquivo" accept="image/,video/" />
+      </div>
+
+      <fieldset>
+        <legend>Informações do denunciante (opcional)</legend>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Nome (opcional)" />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="Telefone (opcional)" />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="E-mail (opcional)" />
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn submit-btn">Enviar Denúncia</button>
+    </form>
+  </div>
+</section>
+<footer style="text-align: center; padding: 20px; background-color: #222; color: #fff; font-size: 0.9rem;">
+  © Todos os direitos reservados aos alunos.
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('logado') !== 'true') {
+    alert('Você precisa estar logado para fazer uma denúncia.');
+    window.location.href = 'login.html';
+  }
+
+  document.getElementById('denuncia-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Denúncia enviada com sucesso!');
+    window.location.href = 'index.html';
+  });
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var perfilContainer = document.getElementById('perfil-container');
+    var logado = localStorage.getItem('logado');
+  
+    if (logado === 'true') {
+      perfilContainer.innerHTML = `
+        <div class="perfil-menu">
+          <img src="assets/img/perfil-icon.png" alt="Perfil" class="perfil-icone" id="perfil-icone">
+          <div class="perfil-opcoes" id="perfil-opcoes" style="display: none;">
+            <button id="logout-btn" class="btn logout-btn">Sair</button>
+          </div>
+        </div>
+      `;
+  
+      // Mostrar opções ao clicar na bolinha
+      document.getElementById('perfil-icone').addEventListener('click', function() {
+        var opcoes = document.getElementById('perfil-opcoes');
+        opcoes.style.display = (opcoes.style.display === 'none') ? 'block' : 'none';
+      });
+  
+      // Função de deslogar
+      document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('logado');
+        localStorage.removeItem('admin');
+        alert('Você saiu da conta.');
+        window.location.href = 'index.html'; // redireciona para home
+      });
+      
+    } else {
+      perfilContainer.innerHTML = `
+        <a href="login.html" class="btn login-btn">Entrar</a>
+        <a href="register.html" class="btn register-btn">Registrar-se</a>
+      `;
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Denúncias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d32f2f;
+    }
+
+    .denuncia {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background-color: white;
+    }
+
+    .denuncia p {
+      margin: 5px 0;
+    }
+
+    .btn-excluir {
+      background-color: #d32f2f;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-excluir:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Denúncias Registradas</h1>
+  <div id="lista-denuncias"></div>
+
+  <script>
+    function carregarDenuncias() {
+      const lista = document.getElementById("lista-denuncias");
+      lista.innerHTML = "";
+
+      const denuncias = JSON.parse(localStorage.getItem("denuncias") || "[]");
+
+      if (denuncias.length === 0) {
+        lista.innerHTML = "<p>Nenhuma denúncia registrada.</p>";
+        return;
+      }
+
+      denuncias.forEach((denuncia) => {
+        const div = document.createElement("div");
+        div.className = "denuncia";
+        div.innerHTML = `
+          <p><strong>Local:</strong> \${denuncia.local}</p>
+          <p><strong>Data:</strong> \${denuncia.data} - <strong>Hora:</strong> \${denuncia.hora}</p>
+          <p><strong>Tipo de Área:</strong> \${denuncia.tipoArea}</p>
+          <p><strong>Descrição:</strong> \${denuncia.descricao}</p>
+          <p><strong>Nome:</strong> \${denuncia.nome || "Não informado"}</p>
+          <p><strong>Telefone:</strong> \${denuncia.telefone || "Não informado"}</p>
+          <p><strong>E-mail:</strong> \${denuncia.email || "Não informado"}</p>
+          <button class="btn-excluir" onclick="excluirDenuncia(\${denuncia.id})">Excluir</button>
+        `;
+        lista.appendChild(div);
+      });
+    }
+
+    function excluirDenuncia(id) {
+      let denuncias = JSON.parse(localStorage.getItem("denuncias") || "[]");
+      denuncias = denuncias.filter(denuncia => denuncia.id !== id);
+      localStorage.setItem("denuncias", JSON.stringify(denuncias));
+      carregarDenuncias();
+    }
+
+    carregarDenuncias();
+  </script>
+</body>
+
+</html>

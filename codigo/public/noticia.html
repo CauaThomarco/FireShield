@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feed de Notícias Dinâmico</title>
+  <link rel="stylesheet" href="assets/css/noticia.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">FireShield</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="feed.html">Feed de Denúncias</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>Feed de Notícias</h1>
+<div id="clock"></div>
+
+<div id="controls">
+  <select id="sort-select" aria-label="Ordenar notícias">
+    <option value="date-desc">Mais recentes</option>
+    <option value="date-asc">Mais antigas</option>
+    <option value="title-asc">Título A-Z</option>
+    <option value="title-desc">Título Z-A</option>
+  </select>
+
+  <select id="filter-select" aria-label="Filtrar por categoria">
+    <option value="all">Todas as categorias</option>
+    <option value="Prevenção">Prevenção</option>
+    <option value="Saúde e Meio Ambiente">Saúde e Meio Ambiente</option>
+    <option value="Segurança no Trânsito">Segurança no Trânsito</option>
+    <option value="Gestão e Planejamento">Gestão e Planejamento</option>
+    <option value="Cultura e Meio Ambiente">Cultura e Meio Ambiente</option>
+    <option value="Esporte e Comunidade">Esporte e Comunidade</option>
+  </select>
+
+  <form id="search-form">
+    <input type="search" id="search-input" placeholder="Pesquisar..." />
+    <button type="submit">Buscar</button>
+  </form>
+</div>
+
+<div id="news-feed" aria-live="polite"></div>
+
+<script src="assets/js/noticia.js"></script>
+</body>
+</html>

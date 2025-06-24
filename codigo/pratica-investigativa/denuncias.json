@@ -1,0 +1,40 @@
+{
+    "denuncia": {
+      "numero": "DEN-2025-0087",
+      "dataOcorrencia": "2025-05-17",
+      "horarioOcorrencia": "13:45",
+      "local": {
+        "regiao": "Zona Sul",
+        "bairro": "Bairro das Palmeiras",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "coordenadas": {
+          "latitude": -18.9127,
+          "longitude": -48.2755
+        }
+      },
+      "status": {
+        "descricao": "Queimada controlada. Aguardando laudo técnico.",
+        "ultimaAtualizacao": "2025-05-18 09:22"
+      },
+      "responsavel": {
+        "nome": "Ana Paula Rodrigues",
+        "orgao": "Corpo de bombeiros de Minas Gerais"
+      },
+      "testemunhas": [
+        {
+          "nome": "João Carlos Ferreira",
+          "relato": "Vi fumaça intensa saindo da vegetação próxima ao lote 42. Chamei os bombeiros."
+        },
+        {
+          "nome": "Marina Souza",
+          "relato": "Estava com meus filhos e percebemos o cheiro forte de queimado. Tínhamos dificuldade para respirar."
+        }
+      ],
+      "fotos": [
+        "https://exemplo.com/imagens/queimada1.jpg",
+        "https://exemplo.com/imagens/queimada2.jpg"
+      ],
+      "origemSuspeita": "Queima irregular de lixo em área residencial"
+    }
+  }

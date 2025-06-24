@@ -1,0 +1,27 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: FireSheild
+authors:
+  - family-names: Thomarco Thomaz Teixeira
+    given-names: Cauã
+  - family-names: Azevedo Mello
+    given-names: Guilherme
+  - family-names: Vasconcelos Queiroz
+    given-names: Lian
+  - family-names: Domingos Batista Silva
+    given-names: Lucas
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Hanne Soares de Andrade
+    given-names: Michelle
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Augusto de Faria Barros
+    given-names: Diego
+keywords:
+  - Queimadas
+  - Denuncias
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-06-17
