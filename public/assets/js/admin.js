@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-      fetch('http://localhost:10000/usuarios')  // substitua se a URL do seu JSON Server for diferente
+      fetch('http://0.0.0.0:10000/usuarios')  // substitua se a URL do seu JSON Server for diferente
         .then(response => response.json())
         .then(usuarios => {
           const tbody = document.querySelector('#tabela-usuarios tbody');

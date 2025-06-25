@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 const feed = document.getElementById('feed');
-const API_URL = 'http://localhost:10000/denuncias';
+const API_URL = 'http://0.0.0.0:10000/denuncias';
 
 function formatarDataHora(dataStr, horaStr) {
   if (!dataStr || !horaStr) return '';

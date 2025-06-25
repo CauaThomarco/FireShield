@@ -5,7 +5,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
   const senha = document.getElementById('senha').value;
 
   try {
-    const resposta = await fetch('http://localhost:10000/usuarios');
+    const resposta = await fetch('http://0.0.0.0:10000/usuarios');
     const usuarios = await resposta.json();
 
     const usuario = usuarios.find(u => u.cpf === cpf && u.senha === senha);
