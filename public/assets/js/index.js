@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 const feed = document.getElementById('feed');
-const API_URL = 'http://0.0.0.0:10000/denuncias';
+const API_URL = 'https://fireshield-1.onrender.com/denuncias';
 
 function formatarDataHora(dataStr, horaStr) {
   if (!dataStr || !horaStr) return '';

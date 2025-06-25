@@ -1,5 +1,5 @@
  const form = document.getElementById('denunciaForm');
-  const API_URL = 'http://0.0.0.0:10000/denuncias';
+  const API_URL = 'https://fireshield-1.onrender.com/denuncias';
   const previewLocalizacao = document.getElementById('previewLocalizacao');
   let mapa, marcador;
 

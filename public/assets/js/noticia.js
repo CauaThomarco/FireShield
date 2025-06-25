@@ -1,4 +1,4 @@
-  const API_URL = 'http://0.0.0.0:10000/noticias';
+  const API_URL = 'https://fireshield-1.onrender.com/noticias';
     const feedContainer = document.getElementById('news-feed');
     const sortSelect = document.getElementById('sort-select');
     const filterSelect = document.getElementById('filter-select');

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-      fetch('http://0.0.0.0:10000/usuarios')  // substitua se a URL do seu JSON Server for diferente
+      fetch('https://fireshield-1.onrender.com/usuarios')  // substitua se a URL do seu JSON Server for diferente
         .then(response => response.json())
         .then(usuarios => {
           const tbody = document.querySelector('#tabela-usuarios tbody');

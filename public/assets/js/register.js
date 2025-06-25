@@ -13,7 +13,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
     senha: document.getElementById('senha').value
   };
 
-  const response = await fetch("http://0.0.0.0:10000/usuarios", {
+  const response = await fetch("https://fireshield-1.onrender.com/usuarios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(novoUsuario)
