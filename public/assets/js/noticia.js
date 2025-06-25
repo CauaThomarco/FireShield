@@ -1,4 +1,4 @@
-  const API_URL = 'http://localhost:3000/noticias';
+  const API_URL = 'http://localhost:10000/noticias';
     const feedContainer = document.getElementById('news-feed');
     const sortSelect = document.getElementById('sort-select');
     const filterSelect = document.getElementById('filter-select');

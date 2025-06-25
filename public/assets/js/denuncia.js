@@ -1,5 +1,5 @@
  const form = document.getElementById('denunciaForm');
-  const API_URL = 'http://localhost:3000/denuncias';
+  const API_URL = 'http://localhost:10000/denuncias';
   const previewLocalizacao = document.getElementById('previewLocalizacao');
   let mapa, marcador;
 

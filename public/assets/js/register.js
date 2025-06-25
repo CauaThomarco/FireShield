@@ -13,7 +13,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
     senha: document.getElementById('senha').value
   };
 
-  const response = await fetch("http://localhost:3000/usuarios", {
+  const response = await fetch("http://localhost:10000/usuarios", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(novoUsuario)

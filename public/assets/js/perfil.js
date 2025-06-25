@@ -14,7 +14,7 @@ async function carregarPerfil() {
   }
 
   try {
-    const resposta = await fetch(`http://localhost:3000/usuarios/${usuarioId}`);
+    const resposta = await fetch(`http://localhost:10000/usuarios/${usuarioId}`);
     const usuario = await resposta.json();
 
     document.getElementById('nome-texto').textContent = usuario.nome;
@@ -58,7 +58,7 @@ document.getElementById('salvar-btn').addEventListener('click', async () => {
 
 
   try {
-    await fetch(`http://localhost:3000/usuarios/${usuarioId}`, {
+    await fetch(`http://localhost:10000/usuarios/${usuarioId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', carregarPerfil);
 
 
 async function carregarDenuncias() {
-  const resposta = await fetch('http://localhost:3000/denuncias');
+  const resposta = await fetch('http://localhost:10000/denuncias');
   const todas = await resposta.json();
   const minhas = todas.filter(d => d.userId == userId);
 
@@ -118,14 +118,14 @@ async function carregarDenuncias() {
 
 async function excluirDenuncia(id) {
   if (confirm('Tem certeza que deseja excluir esta denúncia?')) {
-    await fetch(`http://localhost:3000/denuncias/${id}`, { method: 'DELETE' });
+    await fetch(`http://localhost:10000/denuncias/${id}`, { method: 'DELETE' });
     carregarDenuncias();
   }
 }
 
 document.getElementById('excluir-btn').addEventListener('click', async () => {
   if (confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível.')) {
-    await fetch(`http://localhost:3000/usuarios/${usuarioId}`, { method: 'DELETE' });
+    await fetch(`http://localhost:10000/usuarios/${usuarioId}`, { method: 'DELETE' });
     localStorage.clear();
     alert('Conta deletada com sucesso.');
     window.location.href = 'index.html';

@@ -1,5 +1,5 @@
   const feed = document.getElementById('feed');
-  const API_URL = 'http://localhost:3000/denuncias';
+  const API_URL = 'http://localhost:10000/denuncias';
 
   function formatarDataHora(dataStr, horaStr) {
     if (!dataStr || !horaStr) return '';
