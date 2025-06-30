@@ -14,7 +14,7 @@ async function carregarPerfil() {
   }
 
   try {
-    const resposta = await fetch(`https://fireshield-1.onrender.com/usuarios/${usuarioId}`);
+    const resposta = await fetch(`http://localhost:3000/usuarios/${usuarioId}`);
     const usuario = await resposta.json();
 
     document.getElementById('nome-texto').textContent = usuario.nome;
@@ -58,7 +58,7 @@ document.getElementById('salvar-btn').addEventListener('click', async () => {
 
 
   try {
-    await fetch(`https://fireshield-1.onrender.com/usuarios/${usuarioId}`, {
+    await fetch(`http://localhost:3000/usuarios/${usuarioId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -92,46 +92,37 @@ window.addEventListener('DOMContentLoaded', carregarPerfil);
 
 
 async function carregarDenuncias() {
-  const resposta = await fetch('https://fireshield-1.onrender.com/denuncias');
-  const todas = await resposta.json();
-  const minhas = todas.filter(d => d.userId == userId);
+  try {
+    const resposta = await fetch('http://localhost:3000/denuncias');
+    const todas = await resposta.json();
 
-  const lista = document.getElementById('lista-denuncias');
-  lista.innerHTML = '';
+    const minhas = todas.filter(d => d.userId == usuarioId); // Corrigido aqui
 
-  if (minhas.length === 0) {
-    lista.innerHTML = '<p>Nenhuma denúncia registrada.</p>';
-    return;
+    const lista = document.getElementById('lista-denuncias');
+    lista.innerHTML = '';
+
+    if (minhas.length === 0) {
+      lista.innerHTML = '<p>Nenhuma denúncia registrada.</p>';
+      return;
+    }
+
+    minhas.forEach(denuncia => {
+      const div = document.createElement('div');
+      div.className = 'denuncia-item';
+      div.innerHTML = `
+        <p><strong>Local:</strong> ${denuncia.local || 'Sem local'}</p>
+        <p><strong>Descrição:</strong> ${denuncia.descricao || 'Sem descrição'}</p>
+        <button class="btn-excluir-denuncia" onclick="excluirDenuncia(${denuncia.id})">Excluir</button>
+      `;
+      lista.appendChild(div);
+    });
+  } catch (erro) {
+    console.error('Erro ao carregar denúncias:', erro);
+    document.getElementById('lista-denuncias').innerHTML = '<p>Erro ao carregar denúncias.</p>';
   }
-
-  minhas.forEach(denuncia => {
-    const div = document.createElement('div');
-    div.className = 'denuncia-item';
-    div.innerHTML = `
-          <p><strong>Título:</strong> ${denuncia.titulo || 'Sem título'}</p>
-          <p><strong>Descrição:</strong> ${denuncia.descricao || 'Sem descrição'}</p>
-          <button class="btn-excluir-denuncia" onclick="excluirDenuncia(${denuncia.id})">Excluir</button>
-        `;
-    lista.appendChild(div);
-  });
 }
-
-async function excluirDenuncia(id) {
-  if (confirm('Tem certeza que deseja excluir esta denúncia?')) {
-    await fetch(`https://fireshield-1.onrender.com/denuncias/${id}`, { method: 'DELETE' });
-    carregarDenuncias();
-  }
-}
-
-document.getElementById('excluir-btn').addEventListener('click', async () => {
-  if (confirm('Tem certeza que deseja excluir sua conta? Esta ação é irreversível.')) {
-    await fetch(`https://fireshield-1.onrender.com/usuarios/${usuarioId}`, { method: 'DELETE' });
-    localStorage.clear();
-    alert('Conta deletada com sucesso.');
-    window.location.href = 'index.html';
-  }
-});
 
 // Carregamento inicial
 carregarPerfil();
 carregarDenuncias();
+  
