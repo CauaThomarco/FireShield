@@ -14,7 +14,7 @@ async function carregarPerfil() {
   }
 
   try {
-    const resposta = await fetch(`http://localhost:3000/usuarios/${usuarioId}`);
+    const resposta = await fetch(`https://fireshield-1.onrender.com/usuarios/${usuarioId}`);
     const usuario = await resposta.json();
 
     document.getElementById('nome-texto').textContent = usuario.nome;
@@ -58,7 +58,7 @@ document.getElementById('salvar-btn').addEventListener('click', async () => {
 
 
   try {
-    await fetch(`http://localhost:3000/usuarios/${usuarioId}`, {
+    await fetch(`https://fireshield-1.onrender.com/usuarios/${usuarioId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -93,7 +93,7 @@ window.addEventListener('DOMContentLoaded', carregarPerfil);
 
 async function carregarDenuncias() {
   try {
-    const resposta = await fetch('http://localhost:3000/denuncias');
+    const resposta = await fetch('https://fireshield-1.onrender.com/denuncias');
     const todas = await resposta.json();
 
     const minhas = todas.filter(d => d.userId == usuarioId); // Corrigido aqui
